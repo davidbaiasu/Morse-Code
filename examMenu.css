@@ -4,7 +4,7 @@
   justify-content: center;
   gap: 30px;
   padding: 15px 20px;
-  margin: 5px auto;
+  margin: 1px auto;
 }
 
 .arrow-btn {
@@ -41,13 +41,14 @@
   text-align: center;
 }
 
-.exam-type-selector {
+.exam-question-type-selector, .exam-answer-type-selector{
   display: flex;
-  gap: 15px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
-  padding: 15px 20px;
-  margin: 5px auto;
+  padding: 10px 15px;
+  margin: 1px auto;
+  max-width: 280px;
 }
 
 .menu-items {
@@ -56,18 +57,18 @@
   align-items: center;
 }
 
-.radio-btn-label {
+.radio-button-label {
   position: relative;
   cursor: pointer;
 }
 
-.radio-btn-label input {
+.radio-button-label input {
   display: none;
 }
 
-.radio-btn-label span {
+.radio-button-label span {
   display: inline-block;
-  padding: 15px 40px;
+  padding: 14px 18px;
   font-size: 20px;
   font-weight: bold;
   border: 2px solid #C9A86B;
@@ -75,20 +76,22 @@
   background-color: white;
   color: #C9A86B;
   transition: all 0.3s ease;
+  min-width: 94px;
+  text-align: center;
 }
 
-.radio-btn-label input:checked + span {
+.radio-button-label input:checked + span {
   background-color: #C9A86B;
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.radio-btn-label:hover span {
+.radio-button-label:hover span {
   border-color: #A0826D;
   transform: scale(1.05);
 }
 
-.radio-btn-label input:checked + span:hover {
+.radio-button-label input:checked + span:hover {
   background-color: #A0826D;
   border-color: #A0826D;
 }

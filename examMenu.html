@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mainMenu.css">
     <link rel="stylesheet" href="examMenu.css">
-    <script src="mainMenu.js"></script>
     <title>Exam - Morse Code</title>
 </head>
 <body>
@@ -14,9 +13,26 @@
             <h1 class="menu-title">Exam</h1>
             <div class="menu-items">
                 <a href="#start"><button class="menu-button">Start</button></a>
+                <div class="number-selector">
+                    <button id="decreaseBtn" class="arrow-btn">◀</button>
+                    <span id="numberValue">10</span>
+                    <button id="increaseBtn" class="arrow-btn">▶</button>
+                </div>
+                <div class="exam-type-selector">
+                    <label class="radio-btn-label">
+                        <input type="radio" name="examType" value="type" checked>
+                        <span>Type</span>
+                    </label>
+                    <label class="radio-btn-label">
+                        <input type="radio" name="examType" value="quiz">
+                        <span>Quiz</span>
+                    </label>
+                </div>
                 <a href="index.html"><button class="menu-button">Back</button></a>
             </div>
         </div>
     </nav>
+    <script src="mainMenu.js"></script>
+    <script src="examMenu.js"></script>
 </body>
 </html>

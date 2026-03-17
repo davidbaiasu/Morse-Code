@@ -1,1 +1,95 @@
+.number-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 20px;
+  margin: 5px auto;
+}
+
+.arrow-btn {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #C9A86B;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-btn:hover {
+  background-color: #A0826D;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.arrow-btn:active {
+  transform: scale(0.95);
+}
+
+#numberValue {
+  font-size: 32px;
+  font-weight: bold;
+  color: #C9A86B;
+  min-width: 60px;
+  text-align: center;
+}
+
+.exam-type-selector {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  margin: 5px auto;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radio-btn-label {
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-btn-label input {
+  display: none;
+}
+
+.radio-btn-label span {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #C9A86B;
+  border-radius: 8px;
+  background-color: white;
+  color: #C9A86B;
+  transition: all 0.3s ease;
+}
+
+.radio-btn-label input:checked + span {
+  background-color: #C9A86B;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.radio-btn-label:hover span {
+  border-color: #A0826D;
+  transform: scale(1.05);
+}
+
+.radio-btn-label input:checked + span:hover {
+  background-color: #A0826D;
+  border-color: #A0826D;
+}
 

@@ -76,8 +76,9 @@ function buildCharacterOptions(correctCharacter) {
 }
 
 function buildQuestions(totalQuestions) {
-	return Array.from({ length: totalQuestions }, () => {
-		const character = getRandomCharacter();
+	const uniqueCharacters = shuffleArray(availableCharacters).slice(0, Math.min(totalQuestions, availableCharacters.length));
+
+	return uniqueCharacters.map((character) => {
 		const morse = charToMorse[character];
 
 		return {
@@ -128,6 +129,10 @@ function moveToNextQuestion() {
 	renderQuestion(currentQuestionIndex);
 }
 
+function revealTranslation() {
+	questionTranslationElement.classList.remove('is-hidden');
+}
+
 function setTypeControlsDisabled(disabledState) {
 	typeAnswerSubmitElement.disabled = disabledState;
 	typeAnswerSubmitSimpleElement.disabled = disabledState;
@@ -175,7 +180,8 @@ function handleTypeAnswer(currentQuestion) {
 
 	typeAnswerInputElement.disabled = true;
 	setTypeControlsDisabled(true);
-	window.setTimeout(moveToNextQuestion, 700);
+	revealTranslation();
+	window.setTimeout(moveToNextQuestion, selectedIsCorrect ? 700 : 1100);
 }
 
 function handleQuizAnswer(selectedButton, currentQuestion) {
@@ -200,7 +206,8 @@ function handleQuizAnswer(selectedButton, currentQuestion) {
 		selectedButton.classList.add('is-wrong');
 	}
 
-	window.setTimeout(moveToNextQuestion, 700);
+	revealTranslation();
+	window.setTimeout(moveToNextQuestion, selectedIsCorrect ? 700 : 1100);
 }
 
 function renderQuizOptions(currentQuestion) {

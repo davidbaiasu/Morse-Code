@@ -1,0 +1,16 @@
+body {
+	align-items: center;
+	justify-content: center;
+}
+
+.result-container {
+	gap: 18px;
+	text-align: center;
+}
+
+.result-score {
+	margin: 0 0 18px;
+	font-size: clamp(40px, 8vw, 60px);
+	font-weight: bold;
+	color: #8b6f47;
+}

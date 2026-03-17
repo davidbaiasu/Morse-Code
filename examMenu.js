@@ -20,3 +20,29 @@ increaseBtn.addEventListener('click', () => {
     numberValue.textContent = currentValue;
   }
 });
+
+const startExamLink = document.getElementById('startExamLink');
+
+startExamLink.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  const questionType = document.querySelector('input[name="questionType"]:checked')?.value;
+  const examType = document.querySelector('input[name="examType"]:checked')?.value;
+  const problems = currentValue;
+
+  const examConfig = {
+    problems,
+    questionType,
+    examType
+  };
+
+  sessionStorage.setItem('examConfig', JSON.stringify(examConfig));
+
+  const params = new URLSearchParams({
+    problems: String(problems),
+    questionType,
+    examType
+  });
+
+  window.location.href = `examSession.html?${params.toString()}`;
+});

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Translate - Morse Code</title>
+	<link rel="stylesheet" href="mainMenu.css">
+	<link rel="stylesheet" href="translate.css">
+</head>
+<body>
+	<nav class="main-menu">
+		<div class="menu-container">
+			<h1 class="menu-title">Translate</h1>
+			<div class="translate-panel">
+				<textarea id="morseInput" class="translate-input" placeholder="Morse code"></textarea>
+				<div class="translate-actions">
+					<a class="translate-back-link" href="index.html"><button id="backButton" class="menu-button" type="button">Back</button></a>
+					<button id="swapButton" class="menu-button" type="button">Swap</button>
+					<button id="translateButton" class="menu-button" type="button">Go</button>
+				</div>
+				<textarea id="lettersInput" class="translate-input" placeholder="Letters"></textarea>
+			</div>
+		</div>
+	</nav>
+	<script src="morseCodeDictionaries.js"></script>
+	<script src="translate.js"></script>
+</body>
+</html>

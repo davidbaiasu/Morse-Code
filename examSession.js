@@ -294,6 +294,14 @@ typeAnswerInputElement.addEventListener('keydown', (event) => {
 	handleTypeAnswer(questions[currentQuestionIndex]);
 });
 
+typeAnswerInputElement.addEventListener('input', () => {
+	if (!isEncodeTypeMode()) {
+		return;
+	}
+
+	typeAnswerInputElement.value = typeAnswerInputElement.value.replace(/[^.\-/ ]+/g, '');
+});
+
 appendDotButtonElement.addEventListener('click', () => {
 	appendSymbolToTypeInput('.');
 });

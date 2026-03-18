@@ -1,0 +1,50 @@
+.translate-panel {
+	width: min(520px, calc(100vw - 40px));
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.translate-input {
+	width: 100%;
+	height: 144px;
+	box-sizing: border-box;
+	padding: 28px 16px;
+	border: 2px solid #c9a86b;
+	border-radius: 12px;
+	background-color: #fff9ef;
+	color: #8b6f47;
+	font-family: "Courier New", monospace;
+	font-size: clamp(17px, 3.8vw, 22px);
+	font-weight: bold;
+	line-height: 1.2;
+	max-width: 100%;
+	overflow-y: auto;
+	white-space: pre-wrap;
+	word-break: break-word;
+	resize: none;
+	outline: none;
+}
+
+.translate-input:focus {
+	border-color: #a0826d;
+}
+
+.translate-actions {
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	width: 100%;
+}
+
+.translate-back-link {
+	flex: 1;
+	display: flex;
+}
+
+.translate-actions .menu-button {
+	flex: 1;
+	width: auto;
+	padding: 16px 12px;
+	font-size: clamp(18px, 4vw, 24px);
+}

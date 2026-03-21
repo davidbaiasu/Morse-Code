@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stats - Morse Code</title>
+	<link rel="stylesheet" href="mainMenu.css">
+	<link rel="stylesheet" href="statistics.css">
+</head>
+<body>
+	<nav class="main-menu">
+		<div class="menu-container stats-container">
+			<h1 class="menu-title">Stats</h1>
+			<div class="stats-panel">
+				<table class="stats-table">
+					<thead>
+						<tr>
+							<th>Letter</th>
+							<th>Morse</th>
+							<th>Seen</th>
+							<th>Correct</th>
+							<th>Accuracy</th>
+						</tr>
+					</thead>
+					<tbody id="statsTableBody"></tbody>
+				</table>
+				<a href="index.html"><button class="menu-button stats-back-button" type="button">Back</button></a>
+			</div>
+		</div>
+	</nav>
+	<script src="morseCodeDictionaries.js"></script>
+	<script src="statistics.js"></script>
+</body>
+</html>

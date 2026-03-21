@@ -1,8 +1,8 @@
 const MIN_LEVEL = 1;
 const MAX_LEVEL = 4;
-const MIN_ENCOUNTERS_FOR_PROMOTION = 3;
-const PROMOTION_ACCURACY_THRESHOLD = 0.8;
-const LOW_ACCURACY_THRESHOLD = 0.6;
+const MIN_ENCOUNTERS_FOR_PROMOTION = 2;
+const PROMOTION_ACCURACY_THRESHOLD = 0.7;
+const LOW_ACCURACY_THRESHOLD = 0.5;
 const LEARN_STORAGE_KEY = 'morseLearnProgress';
 
 const questionPromptElement = document.getElementById('questionPrompt');

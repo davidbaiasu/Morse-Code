@@ -20,8 +20,9 @@ const appendDotButtonElement = document.getElementById('appendDotButton');
 const appendDashButtonElement = document.getElementById('appendDashButton');
 const clearTypeButtonElement = document.getElementById('clearTypeButton');
 const typeAnswerSubmitElement = document.getElementById('typeAnswerSubmit');
-const availableCharacters = Object.keys(charToMorse);
-const availableMorseCodes = Object.values(charToMorse);
+const availableCharacters = Object.keys(charToMorse).filter((character) => /^[A-Z]$/.test(character));
+const availableMorseCodes = availableCharacters.map((character) => charToMorse[character]);
+examConfig.problems = Math.max(1, Math.min(examConfig.problems, availableCharacters.length));
 let currentQuestionIndex = 0;
 let correctAnswersCount = 0;
 

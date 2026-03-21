@@ -1,6 +1,6 @@
 let currentValue = 10;
 const minValue = 5;
-const maxValue = 30;
+const maxValue = 25;
 const step = 5;
 
 const numberValue = document.getElementById('numberValue');

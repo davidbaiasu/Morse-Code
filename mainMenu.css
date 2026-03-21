@@ -28,6 +28,9 @@ body{
     padding: 30px 80px;
     font-size: 32px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     border-radius: 10px;
     background-color: #C9A86B;

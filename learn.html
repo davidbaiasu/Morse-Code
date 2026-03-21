@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Learn - Morse Code</title>
+	<link rel="stylesheet" href="mainMenu.css">
+	<link rel="stylesheet" href="examSession.css">
+	<link rel="stylesheet" href="learn.css">
+</head>
+<body>
+	<nav class="main-menu">
+		<div class="menu-container session-container learn-container">
+			<h1 class="menu-title">Learn</h1>
+			<div class="session-top-square">
+				<div class="session-question-display">
+					<div id="questionPrompt" class="session-question-prompt"></div>
+					<div id="questionTranslation" class="session-question-translation is-hidden"></div>
+				</div>
+			</div>
+			<div id="typeAnswerContainer" class="session-type-answer">
+				<div class="learn-input-row">
+					<a class="learn-back-link" href="index.html"><button class="menu-button learn-back-button" type="button">Back</button></a>
+					<input id="typeAnswerInput" class="session-type-input" type="text" maxlength="5" spellcheck="false" autocomplete="off">
+				</div>
+				<div class="session-quiz-grid session-type-controls">
+					<button id="appendDotButton" class="session-option-button" type="button">.</button>
+					<button id="appendDashButton" class="session-option-button" type="button">-</button>
+					<button id="clearTypeButton" class="session-option-button" type="button">Clear</button>
+					<button id="typeAnswerSubmit" class="session-option-button" type="button">Submit</button>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+	<script src="morseCodeDictionaries.js"></script>
+	<script src="learn.js"></script>
+</body>
+</html>

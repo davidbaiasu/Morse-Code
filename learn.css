@@ -1,0 +1,46 @@
+body {
+	height: auto;
+	min-height: 100vh;
+	align-items: flex-start;
+	padding: 24px 0;
+	box-sizing: border-box;
+}
+
+.learn-container {
+	padding-bottom: 24px;
+}
+
+.learn-input-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+}
+
+.learn-input-row .session-type-input {
+	flex: 1;
+	width: 0;
+}
+
+.learn-back-link {
+	display: flex;
+	flex-shrink: 0;
+}
+
+.learn-back-button {
+	width: 150px;
+	height: 44px;
+	min-width: unset;
+	padding: 0;
+	font-size: clamp(14px, 3vw, 18px);
+	border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+	.learn-back-button {
+		font-size: 22px;
+	}
+}
+
+

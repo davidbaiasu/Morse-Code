@@ -44,5 +44,5 @@ startExamLink.addEventListener('click', (event) => {
     examType
   });
 
-  window.location.href = `examSession.html?${params.toString()}`;
+  window.location.href = `../examSession/examSession.html?${params.toString()}`;
 });

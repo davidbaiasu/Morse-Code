@@ -117,7 +117,7 @@ function finishSession() {
 
 	sessionStorage.setItem('examResult', JSON.stringify(examResult));
 	window.examResult = examResult;
-	window.location.href = 'examResult.html';
+	window.location.href = '../examResult/examResult.html';
 }
 
 function moveToNextQuestion() {

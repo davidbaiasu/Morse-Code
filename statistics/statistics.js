@@ -1,6 +1,7 @@
 const LEARN_STORAGE_KEY = 'morseLearnProgress';
 
 const statsTableBodyElement = document.getElementById('statsTableBody');
+const resetStatsButtonElement = document.getElementById('resetStatsButton');
 
 const availableLetters = Object.keys(charToMorse)
 	.filter((character) => /^[A-Z]$/.test(character))
@@ -74,5 +75,17 @@ function renderStats() {
 		statsTableBodyElement.appendChild(tr);
 	});
 }
+
+function resetStats() {
+	const confirmed = window.confirm('Reset all learning statistics?');
+	if (!confirmed) {
+		return;
+	}
+
+	localStorage.removeItem(LEARN_STORAGE_KEY);
+	renderStats();
+}
+
+resetStatsButtonElement.addEventListener('click', resetStats);
 
 renderStats();

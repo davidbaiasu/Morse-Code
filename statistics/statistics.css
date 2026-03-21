@@ -20,6 +20,17 @@ body {
 	gap: 20px;
 }
 
+.stats-actions {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 16px;
+}
+
+.stats-actions a {
+	width: 100%;
+}
+
 .stats-table {
 	width: 100%;
 	border-collapse: collapse;
@@ -74,10 +85,27 @@ body {
 }
 
 .stats-back-button {
-	width: 280px;
+	width: 100%;
+	padding: 22px 24px;
+	font-size: clamp(20px, 5vw, 32px);
+}
+
+.stats-reset-button {
+	width: 100%;
+	padding: 22px 24px;
+	font-size: clamp(20px, 5vw, 32px);
+	background-color: #c97070;
+}
+
+.stats-reset-button:hover {
+	background-color: #a65a5a;
 }
 
 @media (max-width: 768px) {
+	.stats-actions {
+		gap: 12px;
+	}
+
 	.stats-table th,
 	.stats-table td {
 		padding: 10px 8px;
